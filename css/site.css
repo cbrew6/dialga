@@ -1,0 +1,286 @@
+/* CSS Customizations for CBrew's Website */
+
+:root {
+  --color-primary: #0d3b66;
+  --color-hover:   #144971;
+  --radius:        0.375rem;
+  --flow-space:    1.25rem;
+}
+
+/* ————————————————————————————
+   Global
+   ———————————————————————————— */
+body {
+  text-align: center;
+}
+
+header nav {
+  justify-content: center;
+}
+
+button,
+.button {
+  border-radius: var(--radius);
+}
+
+/* ————————————————————————————
+   Site icon (year page headers)
+   ———————————————————————————— */
+.site-icon.small {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* ————————————————————————————
+   Year / Deck Card Grid
+   ———————————————————————————— */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.6rem;
+  align-items: start;
+}
+
+.grid-3 article {
+  position: relative;
+  height: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-3 article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.grid-3 article img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.grid-3 article:hover img {
+  transform: scale(1.06);
+}
+
+/* Overlay link — centers the pill bubble at the bottom */
+.grid-3 article a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem 0.9rem;
+  text-decoration: none;
+}
+
+/* Frosted glass pill */
+.card-label {
+  padding: 0.35rem 0.85rem;
+  backdrop-filter: blur(6px) brightness(0.45);
+  -webkit-backdrop-filter: blur(6px) brightness(0.45);
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.card-label h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.deck-count {
+  margin: 0.2rem 0 0;
+  padding: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ————————————————————————————
+   Social Icons
+   ———————————————————————————— */
+.social-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
+
+.social-link + .social-link {
+  margin-left: 0.5rem;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.insta-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* ————————————————————————————
+   Decklist Visual Grid
+   ———————————————————————————— */
+.decklist-visual .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  max-width: calc(150px * 8 + 0.5rem * 7);
+  margin: var(--flow-space) auto;
+}
+
+@media (max-width: 500px) {
+  .decklist-visual .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.decklist-visual-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.decklist-visual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.decklist-visual-card .card-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.decklist-visual-card .card-count {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* ————————————————————————————
+   Homepage Hero
+   ———————————————————————————— */
+.hero {
+  padding: 3rem 1rem 2rem;
+}
+
+.hero img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero p.tagline {
+  font-size: 1.05rem;
+  color: var(--pico-muted-color);
+  margin-bottom: 2rem;
+}
+
+.hero .cta {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero .cta:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  margin-top: 0.25rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--pico-muted-border-color);
+  margin: 2.5rem auto;
+  max-width: 400px;
+}
+
+.site-note {
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+  font-style: italic;
+}
+
+/* ————————————————————————————
+   Decklist Swap Guide & Toggles
+   ———————————————————————————— */
+details.deck-toggle {
+  background-color: var(--pico-card-background-color, #fff);
+  border: 1px solid var(--pico-muted-border-color, #ccc);
+  border-radius: var(--pico-border-radius, 8px);
+  margin-bottom: 1rem;
+  box-shadow: var(--pico-card-box-shadow, none);
+}
+
+details.deck-toggle summary {
+  padding: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+details.deck-toggle[open] summary {
+  border-bottom-color: var(--pico-muted-border-color, #ccc);
+}
+
+.swap-header {
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+details.deck-toggle > div {
+  padding: 1rem;
+}
