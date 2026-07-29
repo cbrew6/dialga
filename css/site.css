@@ -27,7 +27,7 @@ button,
    Site icon (nav bar / year page headers)
    ———————————————————————————— */
 .site-icon {
-  height: 56px;
+  height: 70px;
   width: auto;
   vertical-align: middle;
 }
@@ -186,7 +186,7 @@ button,
    Homepage Hero
    ———————————————————————————— */
 .hero {
-  padding: 1rem 1rem 2rem;
+  padding: 0 1rem 2rem;
 }
 
 .hero img {
