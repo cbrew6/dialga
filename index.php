@@ -52,9 +52,6 @@
                     <span class="stat-label">Cards</span>
                 </div>
             </div>
-
-            <hr class="divider">
-            <p class="site-note">ain't my web design skills sick?</p>
         </section>
     </main>
 
