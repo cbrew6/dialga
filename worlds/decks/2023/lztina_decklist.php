@@ -236,7 +236,7 @@
             </div>
     </details>
     <details class="deck-toggle">
-        <summary>Master Top 4</summary>
+        <summary>Master Top 8</summary>
         <div class="decklist-visual standalone">
             <div class="card-grid">
                 <div class="decklist-visual-card">
