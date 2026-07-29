@@ -8,6 +8,10 @@
 
     <title>2009 Worlds | CBrew's Website</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 
     <!-- Brand font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
