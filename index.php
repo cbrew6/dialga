@@ -21,9 +21,6 @@
 
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/site.css">
-
-    <!-- Preload hero image -->
-    <link rel="preload" as="image" href="img/pokemonwc.png">
 </head>
 
 <body>
@@ -33,29 +30,25 @@
 
     <main class="container">
         <section class="hero">
-            <a href="worlds.php">
-                <img src="img/pokemonwc.png" alt="Pokémon World Championships logo" fetchpriority="high">
-            </a>
+            <h1>cbrew's Website</h1>
+            <p class="tagline">Pokémon TCG tools and archives.</p>
+        </section>
 
-            <h1>cbrew's Pokémon TCG Worlds Archive</h1>
-            <p class="tagline">All my World Championship format decks from 2004 to 2025, all in one place.</p>
+        <section class="hub-grid">
+            <article class="hub-card">
+                <h2>Worlds Archive</h2>
+                <p>Every World Championship deck from 2004 to 2025.</p>
+                <a href="worlds.php" class="cta">Browse Decks</a>
+            </article>
 
-            <a href="worlds.php" class="cta">Browse Decks</a>
-
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">22</span>
-                    <span class="stat-label">Years</span>
+            <article class="hub-card">
+                <h2>PTCG Live Tracker</h2>
+                <p>Track your Pokémon TCG Live matches and climb the leaderboard.</p>
+                <div class="hub-card-links">
+                    <a href="/tracker/login.php" class="cta">Log In</a>
+                    <a href="/tracker/leaderboard.php" class="cta cta-secondary">Leaderboard</a>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">140+</span>
-                    <span class="stat-label">Decks</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">8,400+</span>
-                    <span class="stat-label">Cards</span>
-                </div>
-            </div>
+            </article>
         </section>
     </main>
 
